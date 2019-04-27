@@ -1,3 +1,9 @@
+/*
+1.统计并查集集合个数的方法、查找的递归写法
+2.iota的用法
+3.在sort里面直接定义cmp函数的写法
+4.注意思路（很难）。。。
+*/
 #include <bits/stdc++.h>
 #define maxn 505
 using namespace std;
@@ -7,6 +13,8 @@ struct edge {
 };
 int n,cost[maxn]= {0},father[maxn];
 vector<edge> uses,destory;
+
+//注意点一
 int Find(int x)
 {
 	if(x==father[x]) return x;
@@ -19,6 +27,7 @@ int countSet()
 	for(int i=1; i<=n; i++) if(i==father[i]) num++;
 	return num;
 }
+
 int main()
 {
 	int m;
@@ -29,10 +38,12 @@ int main()
 		if(d==0) destory.push_back(edge(a,b,c));
 		else uses.push_back(edge(a,b,c));
 	}
+	//注意点二
 	sort(destory.begin(),destory.end(),[](const edge &a,const edge &b) {
 		return a.cost<b.cost;
 	});
 	for(int i=1; i<=n; i++) {
+			//注意点三
 		iota(father,father+n+1,0);
 		for(edge& p:uses) if(p.c1!=i&&p.c2!=i) {
 				int fx=Find(p.c1),fy=Find(p.c2);

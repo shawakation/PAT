@@ -1,3 +1,2 @@
 # PAT
-Solutions for the Programming Ability Test by Zhejiang University
-(Updating Now)
+部分 PTA 网站上训练集的题解，主要是记录自己备考 PAT 考试中遇到的各种坑，包含乙级、甲级、部分天梯赛题目和部分算法与数据结构题目集的题目

@@ -1,4 +1,8 @@
-Makefile.win
+*Makefile*
 *.o
 *.exe
 *.layout
+*.rc
+*.cbp
+Debug
+Release

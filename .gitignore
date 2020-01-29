@@ -4,5 +4,8 @@
 *.layout
 *.rc
 *.cbp
+*.depend
 Debug
 Release
+bin
+obj

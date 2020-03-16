@@ -5,6 +5,7 @@
 *.rc
 *.cbp
 *.depend
+*.dev
 Debug
 Release
 bin
